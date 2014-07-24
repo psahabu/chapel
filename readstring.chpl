@@ -1,11 +1,11 @@
-use FFS;
+use IO;
 
 var str:string;
 
 {
   writeln("readstring on a URL that we can request byteranges  -- this should work");
 
-  var fl = open("http://norvig.com", iomode.r, ffst.curl);
+  var fl = copen("http://norvig.com", iomode.r);
 
   var reader = fl.reader();
   reader.readstring(str);
@@ -17,7 +17,7 @@ var str:string;
 {
   writeln("readstring on a URL that we cannot request byteranges  -- this should NOT work (we should get an error)");
 
-  var fl = open("http://chapel.cray.com", iomode.r, ffst.curl);
+  var fl = copen("http://chapel.cray.com", iomode.r);
 
   var reader = fl.reader();
   reader.readstring(str);
