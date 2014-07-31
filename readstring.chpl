@@ -15,7 +15,7 @@ var str:string;
 }
 
 {
-  writeln("readstring on a URL that we cannot request byteranges  -- this should NOT work (we should get an error)");
+  writeln("readstring on a URL that we cannot request byteranges  -- this should work");
 
   var fl = open("http://chapel.cray.com", iomode.r);
 
