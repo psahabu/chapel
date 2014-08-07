@@ -4,7 +4,7 @@ var str:string;
 
 {
   writeln("reading -- we can request byteranges ");
-  var fl = openurl("http://norvig.com", iomode.r);
+  var fl = open(url="http://norvig.com", mode=iomode.r);
   var reader = fl.reader();
 
   while(reader.readline(str)){
@@ -17,7 +17,7 @@ var str:string;
 
 {
   writeln("reading -- we cannot request byteranges ");
-  var fl = openurl("http://chapel.cray.com", iomode.r);
+  var fl = open(url="http://chapel.cray.com", mode=iomode.r);
   var reader = fl.reader();
 
   while(reader.readline(str)){
