@@ -6,13 +6,13 @@ var str:string;
 // -- note that this WILL hang using nc since it is expecting EOF
 // an "actual" server will only expect a given number of bytes (which we are
 // satisfying)
-var fl = open("http://norvig.com", iomode.r);
+var fl = openurl("http://norvig.com", iomode.r);
 var reader = fl.reader();
 reader.readstring(str);
 reader.close();
 fl.close();
 
-var flout = open("http://127.0.0.1:1080", iomode.cw);
+var flout = openurl("http://127.0.0.1:1080", iomode.cw);
 var writer = flout.writer();
 writer.write(str);
 writer.close();

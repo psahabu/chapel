@@ -462,10 +462,10 @@ Agents Do the Right Thing</a> (demo)
 <p>If you're new to Chapel, you may want to:
 
 <ul>
-  <li> read a short <a href = "overview.html">overview statement</a>
-                        or a slightly longer <a href =
+  <li> read a short <a href =
                         "http://blog.cray.com/?p=5889">introductory
                         blog article</a>
+       or an even shorter <a href = "overview.html">overview statement</a>
 
   <li> read a more in-depth <a href =
   "papers/BriefOverviewChapel.pdf">overview paper</a>
@@ -491,8 +491,10 @@ Agents Do the Right Thing</a> (demo)
 <p>
 <ul>
   <p>
-    <li> Published a new article, <a href =
-    "http://blog.cray.com/?p=6877">Why Chapel?</a>, on the <a href =
+    <li> Parts <a href = "http://blog.cray.com/?p=6877">one</a>
+    and <a href = "http://blog.cray.com/?p=6908">two</a> of the
+    current blog series <a href = "http://blog.cray.com/?p=6877">Why
+    Chapel?</a> are now available on the <a href =
     "http://blog.cray.com/">Cray blog</a>.
       
   <p>

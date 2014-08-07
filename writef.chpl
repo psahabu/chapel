@@ -2,7 +2,7 @@
 // -- note that this WILL hang using nc since it is expecting EOF
 // an "actual" server will only expect a given number of bytes (which we are
 // satisfying)
-var ff = open("http://127.0.0.1:1080", iomode.cw);
+var ff = openurl("http://127.0.0.1:1080", iomode.cw);
 var ch = ff.writer();
 
 ch.writeln("Part 1");

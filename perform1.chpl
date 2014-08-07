@@ -1,4 +1,4 @@
-var fl = open("http://norvig.com", iomode.r);
+var fl = openurl("http://norvig.com", iomode.r);
 // print to stdout and show progress bar
 fl.setopt(chapcurl.NOPROGRESS, false);
 fl.perform();

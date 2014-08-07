@@ -1,7 +1,7 @@
 writeln("Words words words");
 
-var f = open("http://homes.soic.indiana.edu/tzakian/test.txt", iomode.r);
-/*var f = open("test.txt", iomode.r);*/
+var f = openurl("http://homes.soic.indiana.edu/tzakian/test.txt", iomode.r);
+/*var f = openurl("test.txt", iomode.r);*/
 
 writeln("+match: One word no captures");
 {
