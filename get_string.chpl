@@ -5,18 +5,17 @@ var str:string;
 {
   writeln("readstring on a URL that we can request byteranges  -- this should work");
 
-  var fl = open(url="http://norvig.com", mode=iomode.r);
-  /*fl.setopt(chapcurl.NOPROGRESS, false);*/
-  fl.get(str);
+  var reader = openreader(url="http://norvig.com");
+  reader.readstring(str);
   writeln(str);
-  fl.close();
+  reader.close();
 }
 
 {
   writeln("readstring on a URL that we cannot request byteranges  -- this should still work (we should get an error)");
 
-  var fl = open(url="http://chapel.cray.com", mode=iomode.r);
-  fl.get(str);
+  var reader = openreader(url="http://chapel.cray.com");
+  reader.readstring(str);
   writeln(str);
-  fl.close();
+  reader.close();
 }

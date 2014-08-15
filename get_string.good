@@ -311,12 +311,14 @@ readstring on a URL that we cannot request byteranges  -- this should still work
     Chapel?</a> are now available on the <a href =
     "http://blog.cray.com/">Cray blog</a>.
       
-  <p>
-
-    <li> Slides from <a href = "CHIUW2014.html"><b>CHIUW: the Chapel
-        Implementers and Users Workshop</b></a> are now available for
-        all of the talks.
-
+      <p>
+        
+    <li> <a href = "presentations.html">Recent presentations</a> from
+    the <b>ATPESC2014 Summer School</b>, <b>ASCR Exascale Productivity
+    Workshop</b>, <a href =
+    "CHIUW2014.html"><b>CHIUW</b></a>, <b>PADAL</b>, and <b>EGU
+    2014</b> are now available, as well as a <a href =
+    "tutorials.html">tutorial</a> from <b>SIGCSE</b>.
   <p>
 
     <li> <b>Chapel 1.9.0</b> was released on April 17th,
@@ -324,12 +326,6 @@ readstring on a URL that we cannot request byteranges  -- this should still work
     and/or review the detailed <a href =
     "download.html#releaseNotes">release notes</a>.
 
-      <p>
-
-    <li> <a href = "presentations.html">Recent presentations</a> from
-    the <b>ASCR Exascale Productivity Workshop</b>, <b>PADAL</b>,
-    and <b>EGU 2014</b> are now available, as well as a <a href =
-    "tutorials.html">tutorial</a> from <b>SIGCSE</b>.
 
   <p>
 

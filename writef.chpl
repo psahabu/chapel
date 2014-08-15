@@ -2,8 +2,7 @@
 // -- note that this WILL hang using nc since it is expecting EOF
 // an "actual" server will only expect a given number of bytes (which we are
 // satisfying)
-var ff = open(url="http://127.0.0.1:1080", mode=iomode.cw);
-var ch = ff.writer();
+var ch = openwriter(url="http://127.0.0.1:1080");
 
 ch.writeln("Part 1");
 
@@ -95,4 +94,3 @@ ch.writef("%.3'S\n", "a");
 ch.writef("%.3'S\n", "abcd");
 
 ch.close();
-ff.close();
