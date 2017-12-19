@@ -321,8 +321,8 @@ when it is compiled. For instance, if I installed libcurl, and had it install in
 
 .. code-block:: sh
 
-    export CHPL_AUXIO_LIBS="-L~/include"
-    export CHPL_AUXIO_INCLUDE="-I~/lib"
+    export CHPL_AUXIO_LIBS="-L~/lib"
+    export CHPL_AUXIO_INCLUDE="-I~/include"
 
 In general, you want it so that if you had a .c file that used the libraries
 that you wish to compile Chapel with, all you would need to do to compile this
