@@ -1,3 +1,5 @@
+use Curl;
+
 config const url      = "smtp://smtp.gmail.com:587";
 
 config const from     = "<tztest3@gmail.com>";

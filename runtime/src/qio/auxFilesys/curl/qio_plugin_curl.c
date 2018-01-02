@@ -1,15 +1,15 @@
 /*
  * Copyright 2004-2017 Cray Inc.
  * Other additional copyright holders may be indicated within.
- * 
+ *
  * The entirety of this work is licensed under the Apache License,
  * Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License.
- * 
+ *
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -45,6 +45,8 @@ struct curl_handle {
   //       channels for Curl.
   size_t      current_offset; // The current offset in the file
   int         seekable;       // Can we request byteranges from this URL?
+// TODO:
+// CURLcode    error;
 };
 
 // Since the callback is called many times from a call to curl_easy_perform, and
@@ -271,8 +273,11 @@ qioerr curl_writev(void* fl, const struct iovec* iov, int iovcnt, ssize_t* num_w
   ret = curl_easy_perform(to_curl_handle(fl)->curl);
   *num_written_out = write_vec.total_read;
 
-  if (ret != CURLE_OK)
+  if (ret != CURLE_OK) {
+    int e = errno;
     err_out = qio_mkerror_errno();
+    printf("error no. was: %i\n", e);
+  }
 
   curl_easy_setopt(to_curl_handle(fl)->curl, CURLOPT_UPLOAD, 0L);
   curl_easy_setopt(to_curl_handle(fl)->curl, CURLOPT_INFILESIZE_LARGE, 0L);

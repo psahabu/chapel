@@ -6,7 +6,7 @@ var str:string;
 // -- note that this WILL hang using nc since it is expecting EOF
 // an "actual" server will only expect a given number of bytes (which we are
 // satisfying)
-var reader = openreader(url="http://norvig.com");
+var reader = openreader(url="https://chapel-lang.org");
 reader.readstring(str);
 reader.close();
 

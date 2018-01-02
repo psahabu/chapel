@@ -307,7 +307,10 @@ proc file.setopt(opt:c_int, arg):bool throws {
   }
 
   on this.home {
-    err = chpl_curl_set_opt(this._file_internal, opt, arg);
+    if arg.type == string then
+      err = chpl_curl_set_opt(this._file_internal, opt, arg.localize().c_str());
+    else
+      err = chpl_curl_set_opt(this._file_internal, opt, arg);
   }
 
   if err then try ioerror(err, "in file.setopt(opt:c_int, arg)");
@@ -327,9 +330,9 @@ proc file.setopt(opt:c_int, arg):bool throws {
    :arg args: any number of tuples of the form (curl_option, value). For each
               curl_option, this function will setopt it to its value.
  */
-proc file.setopt(args ...?k) {
+proc file.setopt(args ...?k) throws {
   for param i in 1..k {
-    this.setopt(args(i)(1), args(i)(2));
+    try this.setopt(args(i)(1), args(i)(2));
   }
 }
 

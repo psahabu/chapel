@@ -13,7 +13,7 @@
 }
 
 {
-  var reader = openreader(url="http://chapel.cray.com");
+  var reader = openreader(url="https://chapel-lang.org");
   var str:string;
   reader.readstring(str);
   write(str);

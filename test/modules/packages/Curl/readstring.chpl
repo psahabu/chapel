@@ -2,22 +2,11 @@ use IO;
 
 var str:string;
 
-{
-  writeln("readstring on a URL that we can request byteranges  -- this should work");
+// TODO: version requesting byteranges
 
-  var reader = openreader(url="http://norvig.com");
+// cannot request byteranges
+var reader = openreader(url="https://chapel-lang.org");
 
-  reader.readstring(str);
-  write(str);
-  reader.close();
-}
-
-{
-  writeln("readstring on a URL that we cannot request byteranges  -- this should work");
-
-  var reader = openreader(url="http://chapel.cray.com");
-
-  reader.readstring(str);
-  write(str);
-  reader.close();
-}
+reader.readstring(str);
+write(str);
+reader.close();
