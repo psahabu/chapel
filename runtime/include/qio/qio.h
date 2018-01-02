@@ -863,10 +863,7 @@ void qio_channel_clear_error(qio_channel_t* ch) {
 
 static inline
 void _qio_channel_set_error_unlocked(qio_channel_t* ch, qioerr err) {
-  if( err ) {
-    printf("qio set error: %i\n", qio_err_to_int(err));
-    ch->error = err;
-  }
+  if( err ) ch->error = err;
 }
 
 

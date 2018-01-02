@@ -273,11 +273,8 @@ qioerr curl_writev(void* fl, const struct iovec* iov, int iovcnt, ssize_t* num_w
   ret = curl_easy_perform(to_curl_handle(fl)->curl);
   *num_written_out = write_vec.total_read;
 
-  if (ret != CURLE_OK) {
-    int e = errno;
+  if (ret != CURLE_OK)
     err_out = qio_mkerror_errno();
-    printf("error no. was: %i\n", e);
-  }
 
   curl_easy_setopt(to_curl_handle(fl)->curl, CURLOPT_UPLOAD, 0L);
   curl_easy_setopt(to_curl_handle(fl)->curl, CURLOPT_INFILESIZE_LARGE, 0L);
